@@ -71,3 +71,21 @@ function sleep(time) {
     setTimeout(resolve, time);
   });
 }
+
+/* North for 1400 ms
+East for 1200 ms
+South for 300 ms
+East for 1500 ms
+South for 1500 ms
+West for 2700 ms
+North for 400 ms */
+
+async function moveNPC() {
+  await npc.walkNorth(1400);
+  await npc.walkEast(1200);
+  await npc.walkSouth(300);
+  await npc.walkEast(1500);
+  await npc.walkSouth(1500);
+  await npc.walkWest(2700);
+  await npc.walkNorth(400);
+}
